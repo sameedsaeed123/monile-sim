@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11357239320"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-11357239320');
+    </script>
+    <title>About Us - O2 Mobile Deals</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Premium Gradient Backgrounds */
+        .bg-o2-gradient {
+            background: radial-gradient(circle at 80% 20%, #14b8a6 0%, #0f766e 45%, #042f2e 100%);
+        }
+        
+        .bg-card-gradient {
+            background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+        }
+.bg-o2-gradient { background: radial-gradient(circle at 80% 20%, #14b8a6 0%, #0f766e 45%, #042f2e 100%); }
+        .bg-feature-card { background: linear-gradient(135deg, #042f2e 0%, #14b8a6 100%); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Glass bubbles for feature cards */
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(-5deg); }
+            50% { transform: translateY(-20px) rotate(-3deg); }
+            100% { transform: translateY(0px) rotate(-5deg); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #0f766e; border-radius: 10px; }
+
+        .custom-blue { background-color: #14b8a6; }
+        .footer-link:hover { text-decoration: underline; }
+        /* Decorative bubbles */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
+            pointer-events: none;
+        }
+
+        /* Footer Styling Improvements */
+    .custom-footer {
+        background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%); /* Purple gradient */
+        color: white;
+        padding: 80px 20px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Subtle decorative background glow */
+    .custom-footer::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(13, 148, 136, 0.2) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr; /* Optimized spacing */
+        gap: 40px;
+    }
+
+    .footer-col h3 {
+        font-size: 18px;
+        margin-bottom: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ffffff; /* Light Cyan for headers */
+    }
+
+    .footer-col p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: rgb(255, 255, 255);
+        margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; padding: 0; }
+    .footer-col ul li { margin-bottom: 12px; }
+    
+    .footer-col ul li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .footer-col ul li a:hover {
+        color: white;
+        transform: translateX(5px); /* Smooth slide effect */
+    }
+
+    /* CSS for Icons - Isse apne style tag mein add karein */
+    .social-icons {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        width: 42px;
+        height: 42px;
+        display: inline-flex; /* Use inline-flex for better alignment */
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    /* SVG Default Size */
+    .social-icon svg {
+        width: 20px;
+        height: 20px;
+        display: block; /* Removes baseline spacing */
+    }
+
+    /* Individual Hover Effects */
+    .social-icon.fb:hover { background-color: #1877F2; transform: translateY(-3px); }
+    .social-icon.yt:hover { background-color: #FF0000; transform: translateY(-3px); }
+    .social-icon.x:hover { background-color: #000000; transform: translateY(-3px); border: 1px solid rgba(255,255,255,0.3); }
+    .social-icon.ig:hover { 
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        transform: translateY(-3px); 
+    }
+
+    /* Newsletter Box */
+    .newsletter-input {
+        display: flex;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 12px;
+        padding: 5px;
+        margin-top: 15px;
+    }
+
+    .newsletter-input input {
+        background: transparent;
+        border: none;
+        padding: 10px 15px;
+        color: white;
+        outline: none;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .newsletter-btn {
+        background: #14b8a6;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .newsletter-btn:hover { background: #0d9488; color: #042f2e; }
+
+    .footer-bottom {
+        max-width: 1200px;
+        margin: 60px auto 0;
+        padding-top: 30px;
+        border-top: 1px solid rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        color: rgb(254, 254, 254);
+    }
+
+    @media (max-width: 992px) {
+        .footer-container { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+        .footer-container { grid-template-columns: 1fr; gap: 30px; }
+        .footer-bottom { flex-direction: column; text-align: center; gap: 20px; }
+    }
+    </style>
+
+    </head>
+<body class="bg-gradient-to-br from-slate-50 via-white to-teal-50 text-slate-900">
+
+    <!-- NAVIGATION -->
+    <header class="fixed w-full top-0 z-[100] transition-all duration-300 backdrop-blur-md bg-gradient-to-r from-teal-600/95 to-emerald-600/95 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <div class="flex items-center space-x-12">
+                    <a href="index.html" class="flex flex-col">
+                        <span class="text-4xl font-extrabold text-white tracking-tighter">
+                        GetO2MobileDeals
+                        </span>
+                        <span class="text-[10px] font-medium text-white/80 tracking-wide uppercase mt-0.5">Independent Comparison Platform</span>
+                    </a>
+
+                    <!-- Desktop Nav -->
+                    <nav class="hidden lg:flex items-center space-x-8 text-[15px] font-semibold text-white/90">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="Sim.html" class="nav-link">SIM Plans</a>
+                        <a href="contact-us.html" class="nav-link">Support</a>
+                    </nav>
+                </div>
+
+                <!-- Right Tools -->
+                <div class="flex items-center space-x-4">
+                    <!-- TFN Button -->
+                    <a href="tel:+448009989853" class="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/30 rounded-lg text-white font-semibold text-sm transition-all hover:scale-105 whitespace-nowrap">
+                        +448009989853
+                    </a>
+                    <!-- Mobile Toggle -->
+                    <button id="menu-toggle" class="lg:hidden text-white">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-gradient-to-r from-teal-600 to-emerald-600 border-t border-white/10 p-8 transform transition-all duration-300">
+            <nav class="flex flex-col space-y-6 text-xl font-bold text-white">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="Sim.html">SIM Plans</a>
+                <a href="contact-us.html">Support</a>
+                <hr class="opacity-20">
+                <a href="tel:+448009989853" class="text-amber-300 text-lg">📞 Need Help?</a>
+            </nav>
+        </div>
+    </header>
+
+<!-- BREADCRUMBS -->
+    <div class="bg-white border-b border-gray-100 mt-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center text-sm">
+            <a href="index.html" class="text-teal-600 hover:text-teal-800 flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                Home
+            </a>
+            <span class="mx-2 text-gray-400">/</span>
+            <span class="text-teal-900 font-medium">About Us</span>
+        </div>
+    </div>
+
+<!-- HEADER STRIPE -->
+<section class="bg-gradient-to-r from-teal-800 to-teal-900 py-3 lg:py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <h1 class="text-4xl lg:text-5xl font-bold text-white mb-0">About Us</h1>
+        <p class="text-xl text-white opacity-90">Your trusted mobile comparison platform</p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="bg-gray-50 py-16 lg:py-20 relative">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <!-- Main About Content -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 lg:p-12 mb-8">
+            <div class="prose prose-lg max-w-none">
+                <h2 class="text-3xl lg:text-4xl font-bold text-teal-900 mb-6">Welcome to GetO2MobileDeals</h2>
+                <p class="text-teal-900 text-lg leading-relaxed mb-6">
+                    We are an independent UK-based mobile comparison and marketing platform designed to help customers explore competitive mobile phone contracts and SIM-only plans across major UK networks.
+                </p>
+                
+                <h3 class="text-2xl font-bold text-teal-900 mt-8 mb-4">Our Mission</h3>
+                <p class="text-teal-900 text-lg leading-relaxed mb-6">
+                    Our mission is to simplify the process of choosing a mobile plan by presenting clear information, flexible options, and straightforward comparisons — all in one place.
+                </p>
+                
+                <h3 class="text-2xl font-bold text-teal-900 mt-8 mb-4">How We Work</h3>
+                <p class="text-teal-900 text-lg leading-relaxed mb-6">
+                    We work with trusted partner providers to connect customers with competitive mobile offers. While we may earn a commission from qualifying purchases, this does not affect the pricing you receive.
+                </p>
+                
+                <h3 class="text-2xl font-bold text-teal-900 mt-8 mb-4">Our Values</h3>
+                <p class="text-teal-900 text-lg leading-relaxed mb-6">
+                    Transparency and clarity are central to our approach. We aim to provide accurate information to help you make informed decisions about your mobile service.
+                </p>
+            </div>
+        </div>
+
+        <!-- Independent Platform Notice -->
+        <div class="bg-slate-100 border-l-4 border-teal-600 rounded-r-2xl shadow-lg p-8 lg:p-10 mb-8">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 mt-1">
+                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-teal-900 mb-3">Independent Platform Notice</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        GetO2MobileDeals is not affiliated with, endorsed by, or officially connected to any specific mobile network operator or device manufacturer. Any references to network providers or smartphone brands are for identification and comparison purposes only.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Affiliate Disclosure Card -->
+        <div class="bg-gradient-to-r from-teal-600 to-emerald-600 rounded-2xl shadow-lg p-8 lg:p-10 text-white">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 mt-1">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Affiliate Disclosure</h3>
+                    <p class="text-white/90 leading-relaxed">
+                        Please note: If you purchase through our links, we may earn a commission from our affiliate partners at no extra cost to you. This helps us maintain our platform and continue providing free comparison services.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Support Section -->
+        <div class="bg-gradient-to-br from-teal-700 to-emerald-800 rounded-2xl shadow-lg p-8 lg:p-12 text-white mt-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-amber-400/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+            
+            <div class="relative z-10 text-center">
+                <span class="text-5xl mb-4 block">📞</span>
+                <h3 class="text-2xl lg:text-3xl font-bold mb-4">Need Help With Your Mobile Plan?</h3>
+                <p class="text-lg text-teal-100 mb-6">We're here to guide you.</p>
+                <p class="text-white/90 mb-8 max-w-xl mx-auto leading-relaxed">
+                    If you purchased or applied for a mobile plan through our platform and need assistance, our support team can help direct you to the right place.
+                </p>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-md mx-auto text-left">
+                    <h4 class="text-lg font-bold text-amber-300 mb-4 text-center">We can assist with:</h4>
+                    <ul class="space-y-2 text-white/90 text-sm">
+                        <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Understanding your plan options</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> General queries about upgrades</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Information about trade-in processes</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Guidance on switching networks</li>
+                        <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Help navigating provider support channels</li>
+                    </ul>
+                </div>
+                
+                <a href="contact-us.html" class="inline-block px-8 py-3 bg-white/20 border border-white/30 text-white rounded-xl font-bold hover:bg-white/30 transition-all mr-4">
+                    Contact Support
+                </a>
+                <a href="tel:+448009989853" class="inline-block px-8 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-bold hover:from-orange-600 hover:to-amber-600 transition-all">
+                    📞 Call Now
+                </a>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-8 text-center">
+            <a href="tel:+448009989853" class="inline-block px-8 py-4 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-xl font-bold text-lg shadow-lg hover:from-teal-700 hover:to-emerald-700 transition-all hover:scale-105">
+                Call Now: +448009989853
+            </a>
+        </div>
+    </div>
+
+    <!-- Call Now Button -->
+    <div class="fixed right-0 top-1/2 -translate-y-1/2 z-50">
+        <a href="tel:+448009989853" class="bg-gradient-to-r from-teal-600 to-emerald-600 text-white py-4 px-3 rounded-l-lg shadow-lg hover:from-teal-700 hover:to-emerald-700 transition-colors cursor-pointer group block">
+            <span class="[writing-mode:vertical-lr] rotate-180 font-bold text-sm tracking-wide block">Call now for more info</span>
+        </a>
+    </div>
+</section>
+
+    <footer class="custom-footer">
+    <div class="footer-container">
+        <!-- Section 1: Branding -->
+<div class="footer-col">
+    <div class="text-2xl font-extrabold text-white mb-2">GetO2MobileDeals</div>
+    <p class="text-xs text-white/70 mb-2">Independent Comparison Platform</p>
+    <p style="font-size: 14px; color: rgb(255, 255, 255); line-height: 1.6; max-width: 300px;">
+        We help customers compare mobile phone contracts and SIM-only plans across major UK networks.
+    </p>
+</div>
+
+        <!-- Section 2: Compare -->
+        <div class="footer-col">
+            <h3>Compare</h3>
+            <ul>
+                <li><a href="Sim.html">SIM-Only Plans</a></li>
+                <li><a href="index.html">All Deals</a></li>
+            </ul>
+        </div>
+
+        <!-- Section 3: Support -->
+        <div class="footer-col">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Section 4: Legal Disclaimer -->
+        <div class="footer-col">
+            <p class="text-white/70 text-xs leading-relaxed">We are an independent mobile comparison and marketing website. We are not affiliated with, endorsed by, or officially connected to any specific mobile network provider. All trademarks and brand names are the property of their respective owners.</p>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 GetO2MobileDeals. All rights reserved.</p>
+        <div style="display: flex; gap: 20px;">
+            <a href="privacy-policy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+            <a href="contact-us.html" style="color: inherit; text-decoration: none;">Contact</a>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Mobile menu toggle
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Sticky Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-2xl');
+                header.classList.remove('py-0');
+            } else {
+                header.classList.remove('py-2', 'shadow-2xl');
+            }
+        });
+    </script>
+
+</body>
+</html>
