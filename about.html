@@ -258,26 +258,28 @@
 
                 <!-- Right Tools -->
                 <div class="flex items-center space-x-4">
-                    <!-- TFN Button -->
-                    <a href="tel:+448009989853" class="px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-xl text-white font-bold text-sm transition-all hover:scale-105 whitespace-nowrap shadow-lg shadow-orange-500/30">
+                    <!-- TFN Button - Hidden on mobile -->
+                    <a href="tel:+448009989853" class="hidden lg:flex px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-xl text-white font-bold text-sm transition-all hover:scale-105 whitespace-nowrap shadow-lg shadow-orange-500/30">
                         📞 +448009989853
                     </a>
                     <!-- Mobile Toggle -->
-                    <button id="menu-toggle" class="lg:hidden text-white">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
+                    <button id="menu-toggle" class="lg:hidden text-white p-2 flex items-center justify-center">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-gradient-to-b from-teal-800 to-emerald-900 border-t border-white/10 p-8 transform transition-all duration-300">
-            <nav class="flex flex-col space-y-6 text-xl font-bold text-white">
-                <a href="index.html">🏠 Home</a>
-                <a href="about.html">ℹ️ About</a>
-                <a href="Sim.html">📱 SIM Plans</a>
-                <hr class="opacity-20">
-                <a href="tel:+448009989853" class="text-amber-300 text-lg">📞 Need Help? Call Us</a>
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-gradient-to-b from-teal-800 to-emerald-900 border-t border-white/10 p-6 transform transition-all duration-300">
+            <nav class="flex flex-col space-y-5 text-lg font-bold text-white">
+                <a href="index.html" class="py-2 hover:text-amber-300 transition-colors">🏠 Home</a>
+                <a href="about.html" class="py-2 hover:text-amber-300 transition-colors">ℹ️ About</a>
+                <a href="Sim.html" class="py-2 hover:text-amber-300 transition-colors">📱 SIM Plans</a>
+                <hr class="opacity-20 my-2">
+                <a href="tel:+448009989853" class="flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl text-white font-bold text-base shadow-lg">
+                    📞 +448009989853
+                </a>
             </nav>
         </div>
     </header>
